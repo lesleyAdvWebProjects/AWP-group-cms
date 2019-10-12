@@ -1,20 +1,20 @@
-<?php 
-	include 'includes/head.php';
+<?php
+include 'includes/head.php';
 
-	function getRecipesFromDatabase() {
-		// Get the recipe title
-        $recTitle = rawurldecode($_GET["title"]);
-	
-		// Get the recipe that matches the title
-		include_once 'db_connect.php';
-		$sql = "SELECT * FROM recipes WHERE title='" . $recTitle . "'";
-		$result = mysqli_query($conn, $sql);
-	
-		// Get the first row from the result as an associative array
-		$recDetails = mysqli_fetch_assoc($result);
-		return $recDetails;
-	}
-    $recDetails = getRecipesFromDatabase();
+function getRecipesFromDatabase() {
+	// Get the recipe title
+	$recTitle = rawurldecode($_GET["title"]);
+
+	// Get the recipe that matches the title
+	include_once 'db_connect.php';
+	$sql = "SELECT * FROM recipes WHERE title='" . $recTitle . "'";
+	$result = mysqli_query($conn, $sql);
+
+	// Get the first row from the result as an associative array
+	$recDetails = mysqli_fetch_assoc($result);
+	return $recDetails;
+}
+$recDetails = getRecipesFromDatabase();
 
 ?>
 
@@ -35,7 +35,7 @@
 
 		</ul>
 
-	
+
 	</main>
 	<footer>
 
