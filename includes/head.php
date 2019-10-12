@@ -17,7 +17,7 @@
 ?>
 <div id="header">
 		<div id="nav">
-		 <a href="index.php">Home</a> | <a href="post-recipes-submission.php">Add a Recipe</a><br/>
+		 <a href="index.php">Home</a> | <a href="post-recipe.php">Add a Recipe</a><br/>
 		</div>
 </div>
 

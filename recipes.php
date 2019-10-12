@@ -3,7 +3,7 @@
 
 	function getRecipesFromDatabase() {
 		// Get the recipe title
-		$recTitle = rawurldecode($_GET["title"]);
+        $recTitle = rawurldecode($_GET["title"]);
 	
 		// Get the recipe that matches the title
 		include_once 'db_connect.php';
@@ -17,17 +17,18 @@
     $recDetails = getRecipesFromDatabase();
 
 ?>
+
 	<main>
 
     <ul class="list img-list">
 			<li class="list-item">
-				<a href="#" class="inner">
+				<a class="inner">
 					<div class="li-img">
 						<img src="<?php echo $recDetails["photo"]; ?>" alt="<?php echo $recDetails["title"]; ?>" />
 					</div>
 					<div class="li-text">
-						<h4 class="li-head"><?php echo $recDetails["title"]; ?> by <?php echo $recDetails["chef"]; ?></h4>
-						<p class="li-sub"><?php echo $recDetails["instructions"]; ?> &mdash; <?php echo $recDetails["date"]; ?></p>
+						<h4 class="li-head"><?php echo $recDetails["title"]; ?> by <?php echo $recDetails["chefname"]; ?></h4>
+						<p class="li-sub"><?php echo $recDetails["instructions"]; ?> &mdash; <?php echo $recDetails["entrydate"]; ?></p>
 					</div>
 				</a>
 			</li>

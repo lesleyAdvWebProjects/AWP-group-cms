@@ -30,7 +30,7 @@
 				foreach($recTitles as $recTitle) {
 				echo '
 				<li class="list-item">
-					<a href="recipes.php?title=' . $recTitle . ' class="inner">
+					<a href="recipes.php?title=' . $recTitle . '" class="inner">
 						<div class="li-text">
 							<h4 class="li-head">' . $recTitle . '</h4>
 							</div>
@@ -42,7 +42,7 @@
 
 	</main>
 <footer>
-hello
+
 </footer>
 </body>
 </html>
