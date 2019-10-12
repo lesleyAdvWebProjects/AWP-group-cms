@@ -1,6 +1,18 @@
 <?php
 include 'includes/head.php';
 
+?>
+
+<header>
+<?php
+include 'includes/header.php';
+?>
+
+</header>
+
+<body>
+<?php
+
 function getRecipesFromDatabase() {
 	// Get the recipe title
 	$recTitle = rawurldecode($_GET["title"]);

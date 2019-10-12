@@ -38,6 +38,13 @@ a {
     border-bottom: 2px dotted #AAA37E;
 
 }
+.site-title-link{
+  color: #123D14; 
+}
+
+.site-title a:visited {
+  color: #123D14;
+}
 
 ul{
 	margin-block-start: 0;
