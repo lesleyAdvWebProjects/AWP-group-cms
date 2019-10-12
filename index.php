@@ -1,60 +1,48 @@
-<!DOCTYPE html>
-<html>
-<head>
-
-<?php
-include "includes/head.php";
+<?php 
+	include 'includes/head.php';
 ?>
 
-<body>
-    <header class="site-header" role="banner">
+<?php 
 
-    <div class="site-title">Dev Foodies</div>
+	function getRecipeTitlesFromDatabase() {
+		// Get all the post titles from the posts table
+		include_once 'db_connect.php';
+		$sql = "SELECT title FROM recipes";
+		$result = mysqli_query($conn, $sql);
+		
+		// Get each result row as an assoc array, then add title to $recTitles
+		$recTitles = array();
+		while($row = mysqli_fetch_assoc($result)){
+			array_push($recTitles, $row['title']);
+		}
+		return $recTitles;
+	}
 
-	</header>
+	
+?>
+
 
 	<main>
 
 		<ul class="list img-list">
-			<li class="list-item">
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</a>
-			</li>
-			<li class="list-item">
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</a>
-			</li>
-			<li class="list-item">
-				<a href="#" class="inner">
-					<div class="li-img">
-						<img src="https://bradfrost.github.com/this-is-responsive/patterns/images/fpo_square.png" alt="Image Alt Text" />
-					</div>
-					<div class="li-text">
-						<h4 class="li-head">Title of Content</h4>
-						<p class="li-sub">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</a>
-			</li>
+			<?php	
+				$recTitles = getRecipeTitlesFromDatabase();
+				foreach($recTitles as $recTitle) {
+				echo '
+				<li class="list-item">
+					<a href="recipes.php?title=' . $recTitle . ' class="inner">
+						<div class="li-text">
+							<h4 class="li-head">' . $recTitle . '</h4>
+							</div>
+					</a>
+				</li>';
+				}
+			?>
 		</ul>
 
-		Hello world
 	</main>
 <footer>
-
+hello
 </footer>
 </body>
 </html>
