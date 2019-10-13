@@ -91,6 +91,10 @@ function getRecipesFromDatabase() {
 			var recList = new List('recipe-list', options);
 		})
 	</script>
+	
+<?php
+include 'includes/footer.php';
+?>
 </footer>
 </body>
 </html>
