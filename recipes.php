@@ -50,7 +50,9 @@ $recDetails = getRecipesFromDatabase();
 		<button onclick="window.location.href='/index.php'">Go Back</button> 
 	</main>
 	<footer>
-
+<?php
+include 'includes/footer.php';
+?>
 </footer>
 </body>
 </html>
