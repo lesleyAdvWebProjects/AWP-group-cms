@@ -31,7 +31,7 @@ $recDetails = getRecipesFromDatabase();
 ?>
 
 	<main>
-
+<div class="col-md-8"> 
     <ul class="list img-list">
 			<li class="list-item">
 				<a class="inner">
@@ -46,7 +46,18 @@ $recDetails = getRecipesFromDatabase();
 			</li>
 
 		</ul>
+		</div> 
 
+<div class="col-md-4"> 
+            <input type="checkbox" name="ingredient1" value="ingredient1"> <!-- echo ingredient--><br>
+            <input type="checkbox" name="ingredient2" value="ingredient2"> <!-- echo ingredient--><br>
+            <input type="checkbox" name="ingredient3" value="ingredient3" checked> <!-- echo ingredient--><br><br>
+            <input type="submit" value="Add to List">
+
+</div>
+		
+		
+		
 		<button onclick="window.location.href='/index.php'">Go Back</button> 
 	</main>
 	<footer>
