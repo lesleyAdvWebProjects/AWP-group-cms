@@ -20,7 +20,7 @@ include 'includes/header.php';
 		</form>
 	
 	</main>
-	<footer>
+	<footer> 
 	<?php
 include 'includes/footer.php';
 ?>

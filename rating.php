@@ -35,7 +35,7 @@ include_once 'db_connect.php';
 	$result = mysqli_query($conn, $sql);
 
 	// Get the first row from the result as an associative array
-	$ratingData = mysqli_fetch_assoc($result);
+	$ratingData = mysqli_fetch_assoc($result); 
 	
 
 	

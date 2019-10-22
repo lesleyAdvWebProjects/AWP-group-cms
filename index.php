@@ -66,7 +66,7 @@ function getRecipeTitlesFromDatabase() {
 					</a>
 				</li>';
 				}
-			?>
+			?> 
 		</ul>
 
 
