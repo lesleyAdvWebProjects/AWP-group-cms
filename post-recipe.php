@@ -1,7 +1,5 @@
-<?php include 'includes/head.php'; ?>
-<?php
-include 'includes/header.php';
-?>
+<?php include 'includes/header.php'; ?>
+
 <h1>Submit Your Recipe</h1> 
 	<main>
 		<form method="post" action="recipe-submit.php">

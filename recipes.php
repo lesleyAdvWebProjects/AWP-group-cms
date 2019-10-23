@@ -1,14 +1,8 @@
 <?php
-include 'includes/head.php';
-
-?>
-
-<header>
-<?php
 include 'includes/header.php';
+
 ?>
 
-</header>
 
 <body>
 <?php
