@@ -15,7 +15,7 @@ include 'includes/header.php';
 
 function getRecipesFromDatabase() {
 	// Get the recipe title
-	$recTitle = rawurldecode($_GET["title"]);
+	$recTitle = rawurldecode($_GET["title"]); 
 
 	// Get the recipe that matches the title
 	include_once 'db_connect.php';

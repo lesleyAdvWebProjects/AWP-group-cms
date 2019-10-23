@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Dev Foodies Recipes</title>
-    <link rel="stylesheet" href="includes/main.css">
+    <link rel="stylesheet" href="includes/main.css"> 
    
     <!--Fonts from google fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">

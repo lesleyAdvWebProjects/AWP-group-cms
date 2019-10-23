@@ -15,5 +15,5 @@ $sql="INSERT INTO recipes (title, instructions, photo, chefname, entrydate) VALU
 $result = mysqli_query($conn, $sql);
 
 // redirect to homepage
-header("Location: index.php");
+header("Location: index.php"); 
 ?>
