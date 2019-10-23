@@ -2,26 +2,9 @@
 include 'includes/header.php';
 ?>
 
-
-
 <body>
 
 <?php
-/*
-function getRecipeTitlesFromDatabase() {
-// Get all the post titles from the posts table
-include_once 'db_connect.php';
-$sql = "SELECT title FROM recipes";
-$result = mysqli_query($conn, $sql);
-
-// Get each result row as an assoc array, then add title to $recTitles
-$recTitles = array();
-while ($row = mysqli_fetch_assoc($result)) {
-array_push($recTitles, $row['title']);
-}
-return $recTitles;
-}
- */
 function getRecipeTitlesFromDatabase() {
 	// Get all the post titles from the posts table
 	include_once 'db_connect.php';
@@ -35,8 +18,6 @@ function getRecipeTitlesFromDatabase() {
 	}
 	return $recTitles;
 }
-
-
 ?>
 
 
@@ -61,7 +42,7 @@ function getRecipeTitlesFromDatabase() {
 					</a>
 				</li>';
 				}
-			?> 
+			?>
 		</ul>
 
 
@@ -71,6 +52,7 @@ function getRecipeTitlesFromDatabase() {
 
 	</main>
 <footer>
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> 
 	<script>
 		$(document).ready(function(){
 			var options = {
@@ -83,6 +65,7 @@ function getRecipeTitlesFromDatabase() {
 <?php
 include 'includes/footer.php';
 ?>
+
 </footer>
 </body>
 </html>
