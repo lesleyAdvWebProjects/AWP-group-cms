@@ -2,7 +2,7 @@
 include 'includes/header.php';
 
 ?>
-
+ 
 <body>
 <?php
 
@@ -64,14 +64,7 @@ $recDetails = getRecipesFromDatabase();
 
 		</ul>
     
-    
-    <div class="col-md-4"> 
-            <input type="checkbox" name="ingredient1" value="ingredient1"> <!-- echo ingredient--><br>
-            <input type="checkbox" name="ingredient2" value="ingredient2"> <!-- echo ingredient--><br>
-            <input type="checkbox" name="ingredient3" value="ingredient3" checked> <!-- echo ingredient--><br><br>
-            <input type="submit" value="Add to List">
-
-</div>
+         <?php echo $recDetails["Ingredients"];?> 
 
 		<button onclick="window.location.href='/index.php'">Go Back</button> 
 	</main>
