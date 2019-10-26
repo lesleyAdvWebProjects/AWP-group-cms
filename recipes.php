@@ -63,8 +63,19 @@ $recDetails = getRecipesFromDatabase();
 			</li>
 
 		</ul>
-    
-         <?php echo $recDetails["Ingredients"];?> 
+     <h2>Ingredients</h2>      
+         
+    <?php $ingredients = $recDetails["Ingredients"]; 
+   
+   $string = preg_split ("/\,/", $ingredients);  
+   
+    foreach ($string as $value) {
+    echo "<input type='checkbox' name='ingredients'> $value </br>";
+    }
+   
+   
+    ?>           
+
 
 		<button onclick="window.location.href='/index.php'">Go Back</button> 
 	</main>
