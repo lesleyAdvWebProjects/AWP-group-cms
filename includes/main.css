@@ -6,6 +6,17 @@ body {
 
 }
 
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 main{
   min-height: 74.6px;
   max-width: 980px;
@@ -98,5 +109,65 @@ li {
   margin: 0;
 }
 .li-sub a {
-  color:#123D14;
+  color:#123D14; 
 }
+
+/* Star Rating */
+.rate {
+  float: left;
+  height: 46px;
+  text-align: left;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  /*top:-9999px;*/
+display: none;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:40px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  /*content: 'â˜… ';*/
+content: "\2605";
+}
+.rate > input:checked ~ label, .rate input[checked="checked"] ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.overall-rating{
+width: 100%;
+float: left;
+font-size: 14px;
+margin-top: 5px;
+color: #8e8d8d;
+}
+
+.statusMsg{
+font-size: 16px;
+padding: 10px !important;
+border: 1.5px dashed;
+}
+.statusMsg.errordiv{
+color: #ff4040;
+}
+.statusMsg.succdiv{
+color: #00bf6f;
+}
+
