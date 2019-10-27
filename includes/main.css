@@ -37,6 +37,17 @@ header{
 
 }
 
+footer {
+  min-height: 74.6px;
+  max-width: 980px;
+  padding-top: 40px;
+  position: relative;
+  padding-right: calc(max(22px, env(safe-area-inset-left))); 
+  padding-left: calc(max(22px, env(safe-area-inset-left))); 
+  margin:0 auto;
+
+}
+
 a {
 	text-decoration: none;
 }
