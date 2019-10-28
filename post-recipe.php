@@ -1,7 +1,8 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php';?>
 
-<h1>Submit Your Recipe</h1> 
+
 	<main>
+		<h1>Submit Your Recipe</h1>
 		<form method="post" action="recipe-submit.php">
 		<label for="recName">Recipe Title</label><br />
 		<input type="text" name="recName" />	<br /><br />
@@ -15,13 +16,13 @@
 		<textarea name="recSteps"></textarea><br /><br />
                 <label for="recIngredients">Ingredients (Separate with Comma)</label>
                 <textarea name="recIngredients"></textarea>
-        
-        
+
+
 		<input type="submit" value="Submit Recipe">
 		</form>
-	
+
 	</main>
-	<footer> 
+	<footer>
 	<?php
 include 'includes/footer.php';
 ?>
