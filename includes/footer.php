@@ -1,10 +1,4 @@
-<h3>Site Map</h3>
-<a href="/index.php">Home</a>
-<a href="/post-recipe.php">Submit a Recipe</a> 
-
-<h3>Contact</h3> 
-<a href"mailto:test@gmail.com">devfood@gmail.com</a> 
-<a href="tel:504-867-5309>867-5309</a> 
+<span class="footermessage">Site developed by <a href="https://github.com/sebastianaro">@sebastianaro</a> <a href="https://github.com/lesleygitholly">@lesleygitholly</a> <a href="https://github.com/AndieRoche">@AndieRoche</a> and <a href="https://github.com/allreitz">@allreitz</a> for Advanced web projects course at <a href="https://lesley.edu/academics/art-design">Lesley Art + Design.</a></span>
 
 
 
